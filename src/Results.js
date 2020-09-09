@@ -17,9 +17,8 @@ function Results({ option }) {
 
     return (
         <div className='results'>
-            {movies.map(movie => (console.log(movie)))}
             {
-            error? `${error}` : 
+            error? <p className='results__error'>`${error}`</p> : 
             <FlipMove>
                 {movies.map((movie) => (
                     <VideoCard key={movie.id} movie={movie} />
